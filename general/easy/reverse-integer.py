@@ -24,8 +24,8 @@ assume that your function returns 0 when the reversed integer overflows.
 
 
 def reverse(x: int) -> int:
-    result = int((str(x)[1:] if x < 0 else str(x))[::-1]) * (-1 if x < 0 else 1)
-    return result if result < pow(2, 31) - 1 and result > pow(-2, 31) else 0
+    result = int(str(x * -1 if x < 0 else x)[::-1]) * (-1 if x < 0 else 1)
+    return result if result in range(pow(-2, 31), pow(2, 31) - 1) else 0
 
 
 assert 54321 == reverse(12345)
