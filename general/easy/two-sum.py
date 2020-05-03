@@ -23,4 +23,4 @@ def twoSum(nums: [int], target: int) -> [int]:
             return [d[diff], index]
 
 
-print(twoSum([2, 5, 10, 7], 9))
+print(twoSum([2, 5, 11, 7], 9))
